@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE575B05-5E15-4C1A-A829-644F5971E4EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DHRQPayment</RootNamespace>
+    <AssemblyName>DHRQPayment</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>公司ICO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EudemonLink, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="InputChaIphoneLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\InputChaIphoneLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Landi.FrameWorks">
+      <HintPath>..\FrameWorks\bin\Debug\Landi.FrameWorks.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FrameWorks\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\CommonErrorDeal.cs" />
+    <Compile Include="Business\DHRQPay\BeingQueryInfoDeal.cs" />
+    <Compile Include="Business\DHRQPay\BeingReadGasCardDeal.cs" />
+    <Compile Include="Business\DHRQPay\BeingWriteGasCardDeal.cs" />
+    <Compile Include="Business\DHRQPay\ChangeBankCardDeal.cs" />
+    <Compile Include="Business\DHRQPay\CommonSuccDeal.cs" />
+    <Compile Include="Business\DHRQPay\DHRQBeingPrintDeal.cs" />
+    <Compile Include="Business\DHRQPay\DHRQBeingProcessDeal.cs" />
+    <Compile Include="Business\DHRQPay\BeingQueryDetailMsgDeal.cs" />
+    <Compile Include="Business\DHRQPay\DHRQDetailMsgRes.cs" />
+    <Compile Include="Business\DHRQPay\DHRQGasCardRes.cs" />
+    <Compile Include="Business\DHRQPay\DHRQPaymentStratagy.cs" />
+    <Compile Include="Business\DHRQPay\DHRQReadCardDeal.cs" />
+    <Compile Include="Business\DHRQPay\DHRQReadGasCardDeal.cs" />
+    <Compile Include="Business\DHRQPay\InputAmountDeal.cs" />
+    <Compile Include="Business\DHRQPay\InputGasNumsDeal.cs" />
+    <Compile Include="Business\DHRQPay\InputPasswordDeal.cs" />
+    <Compile Include="Business\DHRQPay\BeingProtoQueryInfoDeal.cs" />
+    <Compile Include="Business\InitializeDeal.cs" />
+    <Compile Include="Business\MainPageDeal.cs" />
+    <Compile Include="Business\Management\ManageLoginDeal.cs" />
+    <Compile Include="Business\Management\ManageMenuDeal.cs" />
+    <Compile Include="Business\Management\ManageModifyPassDeal.cs" />
+    <Compile Include="Entity\DHRQPaymentEntity.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Package\CReverser_DHRQPaymentPay.cs" />
+    <Compile Include="Package\CSignIn_DHRQPaymentPay.cs" />
+    <Compile Include="Package\DHRQPaymentPay.cs" />
+    <Compile Include="Business\ServiceNotClearDeal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\SignInDeal.cs" />
+    <Compile Include="Business\StopServiceDeal.cs" />
+    <Compile Include="Business\EjectCardDeal.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Package\DHRQPay\ApplicationKeyPay.cs" />
+    <Compile Include="Package\DHRQPay\DetailQueryPay.cs" />
+    <Compile Include="Package\DHRQPay\DHRQTranspay.cs" />
+    <Compile Include="Package\DHRQPay\MsgDownload.cs" />
+    <Compile Include="Package\DHRQPay\ProtoQuery.cs" />
+    <Compile Include="Package\DHRQPay\QueryBalancePay.cs" />
+    <Compile Include="Package\DHRQPay\QueryPay.cs" />
+    <Compile Include="Package\EMV\DHRQPaymentEMV\CDHRQDownParam.cs" />
+    <Compile Include="Package\EMV\DHRQPaymentEMV\CDHRQDownAID.cs" />
+    <Compile Include="Package\EMV\DHRQPaymentEMV\CDHRQDownCA.cs" />
+    <Compile Include="PageManage.cs" />
+    <Compile Include="ParamInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="公司ICO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FrameWorks\FrameWorks.csproj">
+      <Project>{7b193856-5513-4efb-a9d6-bb0434a69f83}</Project>
+      <Name>FrameWorks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
